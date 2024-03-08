@@ -35,13 +35,6 @@ def pegar_caminho(nome):
 def atualizar_caminho(nome):
     dados_lidos = ler_arquivo('caminhos.json')
     ponto = dados_lidos['_default'][nome]["nome"]
-    if request.method == "POST":
-        dados_lidos = ler_arquivo('caminhos.json')
-        ponto = dados_lidos['_default'][nome]["nome"]
-        nome = request.form.get("nome")
-        db.insert({ponto: nome})
-    posts = db.all()
-    return render_template("sobre.html")
     print(ponto)
     return render_template("atualizar.html", nome=nome, ponto=ponto)
 
@@ -56,9 +49,9 @@ def atualizar(nome=None):
     return render_template("sobre.html")
 
 
-@app.route("/deletar")
-def deletar_caminho():
-    return "hello"
+@app.route("/deletar/<nome>")
+def deletar_caminho(nome):
+    return render_template("deletar.html")
 
 
 if __name__ == "__main__":
