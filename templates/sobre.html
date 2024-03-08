@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listar: Zé - Prova 1</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sobre.css') }}">
+</head>
+<body>
+    <!-- <h1>Olá, {{ nome }}!</h1> -->
+    <h3>Seja bem-vindo.</h3>
+    <h2>Cadastros dos pontos</h2>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.nome }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

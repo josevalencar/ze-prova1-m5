@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home: Zé - Prova 1</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hello, World!!</h1>
+    <p>Cadastre seus pontos x, y, z e r </p>
+    <form action="/listas_caminhos" method="post">
+        <input type="text" name="nome" placeholder="Digite os pontos">
+        <!-- <input type="text" name="senha" placeholder="Digite sua senha"> -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

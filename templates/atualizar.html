@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atualizar: Zé - Prova 1</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" sizes="16x16 32x32 48x48">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Atualizar</h1>
+    <p>Atualize seus pontos x, y, z e r do id {{nome}}</p>
+    <form action="/atualizar" method="post">
+        <input type="text" name="nome" placeholder= "{{ ponto }}">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
